@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-------------Tarea evaluativa 03---------------------->
+<!-------------Egoitz Larrea---------------------->
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <!------------- TITULO DE LA PAGINA ---------------------->
+        <title>Tarea Evaluativa DWEC03</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" >
+    </head>
+
+    <body>
+      <h2>Juego acierta las cartas</h2>
+      <div  class="form-signin w-100 m-auto container">
+        <div class="row">
+          <div class="col align-self-center">
+            <img class="mb-4" src="images/angular.png" alt="" width="72" height="57">
+          </div>
+        </div>
+        <div class="row">
+        <form id="formLogin" name="formLogin">
+          <div class="alert alert-danger d-none" id="error" role="alert">
+            El usuario y/o passwod no son correctos. Intentalo de nuevo.
+          </div>
+          <div class="mb-3">
+            <label for="usuarioID" class="form-label">Usuario</label>
+            <input type="text" class="form-control" id="usuarioID" name="usuario" required>
+          </div>
+          <div class="mb-3">
+            <label for="clave" class="form-label">Password</label>
+            <input type="password" class="form-control" id="claveID" name="clave" required>
+          </div>
+          <button class="btn btn-primary w-100 py-2" type="submit">Entrar</button>
+          <p class="mt-5 mb-3 text-body-secondary">By Egoitz Larrea</p>
+        </form>
+       </div>
+      </div>
+       
+
+        <!-------------LAMADA SCRIPTS---------------------->
+      <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+      <script type="text/javascript" src="../js/jquery.cookie.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js" ></script>
+      <script type="text/javascript" src="js/scripts.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-------------Tarea evaluativa 03---------------------->
+<!-------------Egoitz Larrea---------------------->
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <!------------- TITULO DE LA PAGINA ---------------------->
+        <title>Tarea Evaluativa DWEC03</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet" >
+        <link href="../css/main.css" rel="stylesheet" >
+        </style>
+    </head>
+
+    <body>
+   
+      <!--------------- Cabecera del juego --------------->
+      <div class="container-fluid">
+        <div class="row mt-3">
+          <label class="col-2" style="font-family: fantasy;">Aciertos:<span class="ms-3" id="aciertosId"></span></label>
+          <label class="col-2" style="font-family: fantasy;">Fallos:<span class="ms-3" id="fallosId"></span></label>
+          <label class="col-2 " style="font-family: fantasy;" >Intentos:<span class="ms-3" id="intentosId"></span></label>
+          <label class="col-4 d-md-flex justify-content-md-end"  >Usuario:<span class="ms-3" id="usuarioId"></span></label>
+          <button class="btn btn-danger col-1 justify-content-md-end " type="button" id="btn-salir">Salir</button>
+        </div>
+        
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <fieldset> <legend>Cartas en tablero</legend>
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="12" checked>
+          <label class="form-check-label" for="flexRadioDefault1">12</label> 
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="16">
+          <label class="form-check-label" for="flexRadioDefault1">16</label>
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="20">
+          <label class="form-check-label" for="flexRadioDefault1">20</label>
+          <a href="#" class="btn btn-primary float-right me-md-5 " data-bs-toggle="modal" data-bs-target="#modalGenerarTablero">Cargar tablero</a>
+        </fieldset>
+        </div>
+      </div>
+
+      <hr>
+
+      <!--------------- Tablero del juego --------------->
+      <div  class="container-fluid" >
+        <div class="row mt-3 ml-auto justify-content-md-center col-12" id="tablero">
+        </div>
+      </div>
+      <!--------------- Modal confirmacion nuevo tablero --------------->
+      <div class="modal fade" id="modalGenerarTablero" tabindex="-1" role="dialog" aria-labelledby="modalGenerarTableroLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalGenerarTableroLabel">Generar tablero</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+             Vas a generar un nuevo tablero. ¿Estás seguro?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+              <button type="button" class="btn btn-primary" id="btn-tablero">Sí</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modalFinPartida" tabindex="-1" role="dialog" aria-labelledby="modalFinPartidaLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalFinPartidaLabel">Fin Partida</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+            ¡¡¡¡Has acertado todas las cartas!!!!!
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <!-------------LAMADA SCRIPTS---------------------->
+      <script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
+      <script type="text/javascript" src="../js/jquery.cookie.min.js"></script>
+      <script src="../js/bootstrap.bundle.min.js" ></script>
+      <script type="text/javascript" src="../model/Carta.js"></script>
+      <script type="text/javascript" src="../js/juego.js"></script>
+
+    </body>
+
+</html>
