@@ -12,7 +12,7 @@ function include(file) {
 }
 
 //Incluimos el objeto Socio necesario para la aplicacion
-include('../model/Usuario.js');
+//include('../model/Usuario.js');
 
 
 console.log('Empieza el programa')
@@ -100,15 +100,23 @@ function validarUsuario () {
   console.log(JSON.parse(listausuarios));
   let usuario=document.getElementById("usuarioID").value;
   let clave=document.getElementById("claveID").value;
+  $('#caracterId').addClass("d-none");
+  $('#caracterId').text("");
   if(usuario.trim()=='' || clave.trim()==''){
     alert("Los datos nombre y apellido son obligatorios");
   }else{
-   if(usuarios.usuarioValido(usuario,clave)){
-    return true;
-   }else{
-    return false;
-   }
+    let result = clave.match(/([¡#$%&'"\(\)*+,-.\/:;<=>¿@\[\]\\^_`{])/g);
+    if (null==result){
+      if(usuarios.usuarioValido(usuario,clave)){
+        return true;
+      }
+    }else{
+      $('#caracterId').removeClass("d-none");
+      $('#caracterId').text("Caracteres especiales no permitido: "+result.toString());
+      console.log("carater especial");
+    }
   }
+  return false;
 }
 
 // ------------------- MAIN ------------------------
