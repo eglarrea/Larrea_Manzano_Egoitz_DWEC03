@@ -111,7 +111,7 @@ $(document).ready(function(){
   $("#formLogin").on('submit', function(event,e){
     event.preventDefault(); 
     if(validarUsuario()){
-      window.location.href = '/vista/juego.html';
+      window.location.href = './vista/juego.html';
     }else{
       $('#error').removeClass("d-none");
     }

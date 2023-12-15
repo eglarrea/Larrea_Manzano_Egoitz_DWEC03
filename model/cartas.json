@@ -1,57 +1,57 @@
 [   
    {
       "id":1,
-	  "imagen":"/images\/java.png"
+	  "imagen":"..\/images\/java.png"
       
    },
    {
       "id":2,
-      "imagen":"../images\/angular.png"
+      "imagen":"..\/images\/angular.png"
    },
 
    {
       "id":3,
-      "imagen":"/images\/js.png"
+      "imagen":"..\/images\/js.png"
    }
    ,
 
    {
       "id":4,
-      "imagen":"/images\/python.png"
+      "imagen":"..\/images\/python.png"
    }
    ,
 
    {
       "id":5,
-      "imagen":"/images\/joomla.png"
+      "imagen":"..\/images\/joomla.png"
    }
    ,
 
    {
       "id":6,
-      "imagen":"/images\/postgres.png"
+      "imagen":"..\/images\/postgres.png"
    }
    ,
 
    {
       "id":7,
-      "imagen":"/images\/visual.png"
+      "imagen":"..\/images\/visual.png"
    },
 
    
    {
       "id":8,
-      "imagen":"/images\/git.png"
+      "imagen":"..\/images\/git.png"
    },
    
    {
       "id":9,
-      "imagen":"/images\/jenkins.png"
+      "imagen":"..\/images\/jenkins.png"
    },
    
    {
       "id":10,
-      "imagen":"/images\/boostrap.png"
+      "imagen":"..\/images\/boostrap.png"
    }
    
 ]

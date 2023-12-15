@@ -1,17 +1,5 @@
 'use strict'
-/*function include(file) {
- 
-  let script = document.createElement('script');
-  script.src = file;
-  script.type = 'text/javascript';
-  script.defer = true;
 
-  document.getElementsByTagName('head').item(0).appendChild(script);
-
-}*/
-
-//Incluimos el objeto Socio necesario para la aplicacion
-//include('../model/Carta.js');
 
 const marcador={
   intentos:0,
@@ -135,7 +123,7 @@ function getNumeroCastasSeleccionadas(){
 
 function cargarCartasJSON () {
   
-  let path = '/model/cartas.json'
+  let path = '../model/cartas.json'
 
   let request = new Request(path, {
     headers: new Headers({
