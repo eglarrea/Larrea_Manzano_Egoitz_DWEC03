@@ -1,19 +1,5 @@
 'use strict'
 // Funcion para agretar ficheros js 
-function include(file) {
- 
-  let script = document.createElement('script');
-  script.src = file;
-  script.type = 'text/javascript';
-  script.defer = true;
-
-  document.getElementsByTagName('head').item(0).appendChild(script);
-
-}
-
-//Incluimos el objeto Socio necesario para la aplicacion
-//include('../model/Usuario.js');
-
 
 console.log('Empieza el programa')
 
@@ -88,7 +74,6 @@ function aniadirUsuarioInicialesArray(data) {
       let socio= new Usuario(data[i].id,data[i].nombre,data[i].apellido,data[i].usuario,data[i].contrasena);
       usuarios.anadirUsuario(socio);
     }
-    
 }
 
 /*
@@ -97,11 +82,12 @@ function aniadirUsuarioInicialesArray(data) {
 function validarUsuario () {
   // TODO: recoger los el usuario y clave del HTML
   let listausuarios=localStorage.getItem("usuarios");
-  console.log(JSON.parse(listausuarios));
+  
   let usuario=document.getElementById("usuarioID").value;
   let clave=document.getElementById("claveID").value;
   $('#caracterId').addClass("d-none");
   $('#caracterId').text("");
+
   if(usuario.trim()=='' || clave.trim()==''){
     alert("Los datos nombre y apellido son obligatorios");
   }else{
@@ -112,8 +98,7 @@ function validarUsuario () {
       }
     }else{
       $('#caracterId').removeClass("d-none");
-      $('#caracterId').text("Caracteres especiales no permitido: "+result.toString());
-      console.log("carater especial");
+      $('#caracterId').text("Caracteres especiales no permitidos: "+result.toString());
     }
   }
   return false;
